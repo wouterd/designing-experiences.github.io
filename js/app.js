@@ -39,7 +39,7 @@ angular.module('ingExperience', [
 function initMap() {
 	var b, d = {
 	    zoom: 16,
-	    center: new google.maps.LatLng(52.3660036, 4.9143381),
+	    center: new google.maps.LatLng(52.3665036, 4.9163381),
 	    mapTypeId: "terrain"
 	};
 	b = new google.maps.Map(jQuery("#map")[0], d);
@@ -52,7 +52,7 @@ function initMap() {
 	    new google.maps.Marker({
 	        position: h,
 	        map: b,
-	        icon: new google.maps.MarkerImage("http://designing-experiences.github.io/img/pointer.png", null, null, null, new google.maps.Size(58, 58)),
+	        icon: new google.maps.MarkerImage("http://designing-experiences.github.io/img/pointer.png", null, null, null, new google.maps.Size(60, 88)),
 	        optimized: !1
 	    })
 	}
