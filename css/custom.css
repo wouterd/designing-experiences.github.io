@@ -13,7 +13,7 @@
     margin-top: 2%;
 }
 
-.row {
+.row:not(:first-child) {
 	padding-top: 1rem;
     padding-bottom: 1rem;
 }
