@@ -1,4 +1,4 @@
-angular.module('ingLUSH', [
+angular.module('ingExperience', [
 	'ingGlobal',
 	'ingComponents',
 	'gTopNavigation',
