@@ -4,3 +4,11 @@
 .tg .l-h-10 {
     height: 4px!important;
 }
+
+.eventLogo {
+	position: absolute;
+    width: 26%;
+    left: 50%;
+    margin-left: -13%;
+    margin-top: 2%;
+}
