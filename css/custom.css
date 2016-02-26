@@ -18,6 +18,17 @@
     padding-bottom: 1rem;
 }
 
+/**
+ * This is temporary
+ */
+.row-noPadding {
+	padding-top: 0;
+    padding-bottom: 0;
+}
+/**
+ * End of temp
+ */
+
 .row-b {
 	background-color: #f5f5f5;
 }
