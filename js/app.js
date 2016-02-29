@@ -38,9 +38,16 @@ angular.module('ingExperience', [
 	 */
 	jQuery(window).on('hashchange', function() {
 		if(jQuery('.navbar-full').length){
+			/**
+			 * Trigger the click
+			 */
 			jQuery('.nav-header')
 				.find('button')
 				.trigger('click');
+			/**
+			 * Animate a short scroll down
+			 */
+			window.scrollBy(0, 10);
 		}
 	});
 });
