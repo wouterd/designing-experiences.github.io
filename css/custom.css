@@ -37,3 +37,35 @@
 	width:100%;
 	height:350px;
 }
+
+/**
+ * Media Query for mobile
+ */
+
+/* EVERYTHING SMALLER THAN 680 */
+@media only screen and (max-width: 680px) {
+    .brandbar-a {
+        display:none !important;
+    }
+    .brandbar-b {
+        display:block !important;
+    }
+    .eventLogo {
+        width: 40%;
+        margin-left: -20%;
+    }
+    .row {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+/* EVERYTHING LARGER THAN 680 */
+@media only screen and (min-width: 680px) {
+    .brandbar-a {
+        display:block !important;
+    }
+    .brandbar-b {
+        display:none !important;
+    }
+}

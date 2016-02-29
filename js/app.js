@@ -31,7 +31,19 @@ angular.module('ingExperience', [
 			});
 		}
 	}
-}]);
+}]).run(function(){
+	/**
+	 * Close menu if opened on hastag change
+	 * Is a hack for XD website because it uses anchors
+	 */
+	jQuery(window).on('hashchange', function() {
+		if(jQuery('.navbar-full').length){
+			jQuery('.nav-header')
+				.find('button')
+				.trigger('click');
+		}
+	});
+});
 
 /**
  * Custom Google Maps
