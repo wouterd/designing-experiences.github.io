@@ -44,10 +44,6 @@ angular.module('ingExperience', [
 			jQuery('.nav-header')
 				.find('button')
 				.trigger('click');
-			/**
-			 * Animate a short scroll down
-			 */
-			window.scrollBy(0, -100);
 		}
 	});
 });
