@@ -47,7 +47,7 @@ angular.module('ingExperience', [
 			/**
 			 * Animate a short scroll down
 			 */
-			window.scrollBy(0, 10);
+			window.scrollBy(0, 100);
 		}
 	});
 });
