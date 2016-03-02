@@ -31,7 +31,7 @@ angular.module('ingExperience', [
 			});
 		}
 	}
-}]).run(['$rootScope', '$location', function ($rootScope, $location) {
+}]).run(['$rootScope', function ($rootScope) {
 	/**
 	 * Close menu if opened on hastag change
 	 * Is a hack for XD website because it uses anchors
