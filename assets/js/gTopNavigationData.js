@@ -13,10 +13,13 @@ angular.module('gTopNavigation').service('gTopNavigationData', function(){
     */
     
     data.segments = [
+        {"href": "/", "name": "Home"},
         {"href": "/#Speakers", "name": "Speakers"},
         {"href": "/#Location", "name": "Location"},
         {"href": "/#Testimonials", "name": "Testimonials"},
-        {"href": "/#Register", "name": "Register"}
+        {"href": "/#Register", "name": "Register"},
+        {"href": "/#NeedHelp", "name": "Need Help?"},
+        {"href": "/#StayInTouch", "name": "Stay in Touch"}
     ];
     
     // data.segments = [];

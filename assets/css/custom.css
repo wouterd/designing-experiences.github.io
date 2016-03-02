@@ -1,0 +1,144 @@
+/**
+ * Custom CSS for experience website
+ */
+.tg .l-h-10 {
+    height: 4px!important;
+}
+
+.eventLogo {
+	position: absolute;
+    width: 26%;
+    left: 50%;
+    margin-left: -13%;
+    margin-top: 2%;
+}
+
+.row:not(:first-child) {
+	padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/**
+ * This is temporary
+ */
+.row-noPadding {
+	padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+/**
+ * End of temp
+ */
+
+.row-b {
+	background-color: #f5f5f5;
+}
+
+#map {
+	width:100%;
+	height:350px;
+}
+
+/**
+ * LABELS
+ */
+span[class^="label-"] {
+    padding: .2rem;
+    border-radius: .2rem;
+}
+
+div[class^="label-"] {
+    position: relative;
+    margin-top: -1.75rem;
+    width: 100%;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    padding: .25rem .25rem .25rem .4rem;
+}
+
+div[class^="label-"] h2 {
+    font-size: 1.25rem;
+}
+
+div[class^="label-"] p {
+    font-size: .85rem;
+    margin-top: -1rem;
+    margin-bottom: 0;
+}
+
+/**
+ * SPEAKERS
+ */
+.speaker {
+    cursor: pointer;
+}
+
+@-webkit-keyframes woooohaaaaaa {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.speaker:hover,
+.speaker:focus {
+    -webkit-animation-name: woooohaaaaaa;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+
+.label-design {
+    background-color:#60A6DA;
+}
+
+.label-leanStartup {
+    background-color:#CD66A4;
+}
+
+.label-APIs {
+    background-color:#D0D93C;
+}
+
+.label-leadership {
+    background-color:#349651;
+}
+
+/**
+ * Media Query for mobile
+ */
+
+/* EVERYTHING SMALLER THAN 680 */
+@media only screen and (max-width: 680px) {
+    .brandbar-a {
+        display:none !important;
+    }
+    .brandbar-b {
+        display:none !important; /* ALSO SET TO NONE FOR NOW */
+    }
+    .eventLogo {
+        width: 40%;
+        margin-left: -20%;
+    }
+    .row {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+/* EVERYTHING LARGER THAN 680 */
+@media only screen and (min-width: 680px) {
+    .brandbar-a {
+        display:block !important;
+    }
+    .brandbar-b {
+        display:none !important;
+    }
+}

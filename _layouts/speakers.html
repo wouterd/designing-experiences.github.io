@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="ingExperience" lang="nl">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link type="image/ico" rel="icon" href="https://www.ing.nl/assets/cds/images/favicon.ico">
+		<meta name="robots" content="noindex">
+
+		<!--<title>The Guide Styles</title>-->
+		<title>{{ page.title }}</title>
+
+		<!--[if gt IE 9]><!-->
+		<!-- link rel="stylesheet" href="build/css/the-guide-styles-responsive.css"/ -->
+		<link rel="stylesheet" href="https://www.ing.nl/assets/web/ng/css/32da0d68.the-guide-styles-responsive.min.css"/>
+		<!--<![endif]-->
+
+		<!--[if lt IE 10]>
+		<link rel="stylesheet" href="build/bless/the-guide-styles-responsive-blessed1.css"/>
+		<link rel="stylesheet" href="build/bless/the-guide-styles-responsive.css"/>
+		<![endif]-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script src="../assets/js/angular-animate.min.js"></script>
+		<script src="../assets/js/angular-resource.min.js"></script>
+		<script src="../../assets/js/angular-sanitize.min.js"></script>
+		<script src="../assets/js/angular-touch.min.js"></script>
+		<script src="../assets/js/spectingular-core.min.js"></script>
+		<script src="../assets/js/spectingular-components.min.js"></script>
+		<script src="../assets/js/gFooter.min.js"></script>
+		<script src="../assets/js/gFooterData.js"></script>
+		<script src="../assets/js/gTopNavigation.min.js"></script>
+		<script src="../assets/js/gTopNavigationData.js"></script>
+		<script src="../assets/js/theguide-checkbox.min.js"></script>
+		<script src="../assets/js/theguide-collapsible.min.js"></script>
+		<script src="../assets/js/theguide-comparison-table.min.js"></script>
+		<script src="../assets/js/theguide-full-cover.min.js"></script>
+		<script src="../assets/js/theguide-icon.min.js"></script>
+		<script src="../assets/js/theguide-image.min.js"></script>
+		<script src="../assets/js/theguide-list.min.js"></script>
+		<script src="../assets/js/theguide-radio.min.js"></script>
+		<script src="../assets/js/theguide-ribbon.min.js"></script>
+		<script src="../assets/js/theguide-split-list.min.js"></script>
+		<script src="../assets/js/theguide-toggle.min.js"></script>
+		<script src="../assets/js/theguide-utils.min.js"></script>
+
+		<!--[if lt IE 10]>
+		<script src="js/flexie.js"></script>
+		<![endif]-->
+
+		<!-- CUSTOM CSS FOR EXPERIENCE WEBSITE -->
+		<link rel="stylesheet" href="../assets/css/custom.css">
+		<script src="../assets/js/app.js"></script>
+
+	</head>
+	<body class="tg">
+		<header top-navigation></header>
+		<main role="main" data-current-content="*">
+			{{ content }}
+		</main>
+		<div id="footer-app" class="ng-scope">
+		    <div class="tg" g-footer=""></div>
+		</div>
+	</body>
+</html>

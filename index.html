@@ -1,96 +1,165 @@
 ---
 layout: default
-title: Experience Design Conference
+title: Experience Design Conference - Home
 ---
 
-<!-- BRANDBAR FOR BIG SCREENS -->
-<div class="row row-noPadding">
-	<div class="brandbar brandbar-a">
-		<div class="brandbar-image" ng-style="backgroundImage" style="background-image: url('img/header.jpg'); margin-top: -1.25rem"></div>
-		<div class="container">
-			<img src="img/event-logo.svg" class="eventLogo">
-		</div>
-	</div>
-</div>
-
-<!-- BRANDBAR FOR SMALL SCREENS -->
-<div class="row row-noPadding">
-	<div class="brandbar brandbar-b">
-		<div class="container">
-			<img src="img/event-logo-black.svg" class="eventLogo">
-		</div>
-	</div>
-</div>
-
-<!-- First Row -->
+<!-- START First Row -->
 <div class="row">
 	<div class="col-lg-12 col-xl-12">
-		<h2 class="heading-b-xxxl" style="text-align: center">Amsterdam, The Netherlands</h2>
-		<h2 class="heading-b-xxl" style="text-align: center">20 &amp; 21 June 2016</h2>
+		<h2 class="heading-b-xxxl" style="text-align: center">
+			<a href="#Location">Amsterdam, 20 &amp; 21 June 2016</a>
+		</h2>
 	</div>
 </div>
+<!-- END First Row -->
+
+<!-- START Second Row -->
 <div class="row">
 	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+		<img src="assets/img/artwork.jpg" style="width:100%">
+	</div>
+</div>
+<!-- END Second Row -->
+
+<!-- START Third Row -->
+<div class="row">
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-8 col-lg-offset-2">
 		<p>
 			XD Conf is a new ING conference that brings together everyone who believes in the power of design in creating viable and valuable customer experiences, services and (software) products.
 		</p>
 		<p>
-			We will gather a great international lineup of <a href="/#Speakers">speakers</a> — technologists, creatives, developers, ops wizards, and community leaders — to provoke and stimulate you with their hard-learned insights on the challenges in designing, delivering and scaling services and products for customers, employees and partners alike.
+			We will gather a great international lineup of <a href="#Speakers">speakers</a> — technologists, creatives, developers, ops wizards, and community leaders — to provoke and stimulate you with their hard-learned insights on the challenges in designing, delivering and scaling services and products for customers, employees and partners alike.
 		</p>
 		<p>
 			<a href=https://www.ing-events.nl/xd-conf/register/>Join us</a> for two days in June in Amsterdam with like-minded colleagues to teach, learn, and connect with each other and, of course, make new friends. Help us to take our collective skills to the next level and start building the future of ING together.
 		</p>
 	</div>
 </div>
+<!-- END Third Row -->
 
-<!-- Second Row -->
+<!-- START Fourth Row -->
 <div id="Speakers" class="row row-b">
 	<div class="col-lg-12 col-xl-12">
 		<h1 class="heading-b-xxxl" style="text-align: center">Speakers</h1>
 	</div>
-	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-		commodo consequat.</p>
-		<p>
-			Do you want to speak alongside these people? We are seeking interesting and unique <a href=https://www.ing-events.nl/xd-conf/register/>proposals</a> on the intersection of design, technology and business. There’s also opportunity to conduct a hands-on workshop to get your story across.
-		</p>
+	<div class="col-xxs-10 col-xxs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+		<p>We look at Exerience Design from all angles.<br>Covered topics include remarkable <span class="label-design">design</span>, perspectives on <span class="label-leanStartup">lean startup</span>, <span class="label-APIs">practical APIs</span> and <span class="label-leadership">tech leadership</span>.<br>Here is the awesome lineup we have for you so far.</p>
 	</div>
 </div>
+<div class="row row-b">
+	<div class="col-xxs-5 col-xxs-offset-1 col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2 speaker" ng-click="gotoSpeaker('name-of-speaker');">
+		<img src="http://abstractions.io/images/speakers/richard-stallman.jpg" alt="Picture of Richard" style="width: 100%">
+		<div class="label-leadership"><h2>Richard Stallman</h2><p>About GNU</p></div>
+	</div>
+	<div class="col-xxs-5 col-xs-5 col-sm-4 col-md-2 col-lg-2 speaker" ng-click="gotoSpeaker('name-of-speaker');">
+		<img src="http://abstractions.io/images/speakers/eileen-uchitelle.jpg" alt="Picture of Eileen" style="width: 100%">
+		<div class="label-APIs"><h2>Eileen Uchitelle</h2><p>APIs in Ruby</p></div>
+	</div>
+	<div class="col-xxs-5 col-xxs-offset-1 col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2 speaker" ng-click="gotoSpeaker('name-of-speaker');">
+		<img src="http://abstractions.io/images/speakers/kelsey-hightower.jpg" alt="Picture of Kelsey" style="width: 100%">
+		<div class="label-leanStartup"><h2>Kelsey Hightower</h2><p>About leaning on startups</p></div>
+	</div>
+	<div class="col-xxs-5 col-xs-5 col-sm-4 col-md-2 col-lg-2 speaker" ng-click="gotoSpeaker('name-of-speaker');">
+		<img src="http://abstractions.io/images/speakers/mike-monteiro.jpg" alt="Picture of Mike" style="width: 100%">
+		<div class="label-APIs"><h2>Mike Monteiro</h2><p>On designing stuff</p></div>
+	</div>
+</div>
+<div class="row row-b">
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-4 col-lg-offset-2">
+		<p class="heading-b-xl">Want to share and contribute?<br>We'd love to have you!</p>
+		<a href="propose.html" target="_self" class="ng-scope">
+			<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Submit a proposal</span>
+		</a>
+	</div>
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-4">
+		<p class="heading-b-xl">Know someone that really should speak at XD Conf?</p>
+		<a href="nominate.html" target="_self" class="ng-scope">
+			<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Nominate a speaker</span>
+		</a>
+	</div>
+</div>
+<!-- END Fourth Row -->
 
-<!-- Third Row -->
+<!-- START Fifth Row -->
 <div id="Location" class="row">
 	<div class="col-lg-12 col-xl-12">
 		<h1 class="heading-b-xxxl" style="text-align: center">Location</h1>
 	</div>
+</div>
+<div class="row">
+	<div class="col-xxs-10 col-xxs-offset-1 col-xs-2 col-xs-offset-2">
+		<img src="assets/img/artis.svg" style="width:100%">
+	</div>
+	<div class="col-xxs-10 col-xxs-offset-1 col-xs-6 col-xs-offset-0">
+		<h2>Amsterdam</h2>
+		<p>...Lorum Ipsum</p>
+		<h2>Artis Royal Zoo</h2>
+		<p>...Lorum Ipsum</p>
+	</div>
+</div>
+<div class="row">
 	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.2435578058803!2d4.914343415710657!3d52.36600355538288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609a1dbac0061%3A0xe6853789b8a4a3d!2sNatura+Artis+Magistra!5e0!3m2!1sen!2snl!4v1456926853240" frameborder="0" style="border:0; width:100%; height: 315px" allowfullscreen></iframe>
+	</div>
+</div>
+<!-- END Fifth Row -->
+
+<!-- START Sixth Row -->
+<div id="Register" class="row row-b">
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center">
+		<h1 class="heading-b-xxxl">Register Now</h1>
+		<a href="register.html" target="_self" class="ng-scope">
+			<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Register</span>
+		</a>
+	</div>
+</div>
+<!-- END Sixth Row -->
+
+<!-- START Seventh Row -->
+<div id="NeedHelp" class="row">
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center">
+		<h1 class="heading-b-xxxl">Need Help?</h1>
+		<p>Want to attend but have some questions or doubts?<br>Get in touch <a href="mailto:xd-conf@ing.nl">directly</a>.</p>
+	</div>
+</div>
+<!-- END Seventh Row -->
+
+<!-- START Eigth Row -->
+<div id="StayInTouch" class="row row-b">
+	<div class="col-xxs-10 col-xxs-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center">
+		<h1 class="heading-b-xxxl">Stay in Touch</h1>
 		<p>
-			As most exciting details are yet to come, we are happy to announce the magnificent location of Experience Design 2016 – the second most visited landmark in Amsterdam, and the greenest location among central Amsterdam canals – Artis Royal Zoo. Artis is the oldest zoo in the Netherlands and one of the oldest in Europe, and therefore offers unique experience for our speakers and attendees to enjoy the diverse plants and animals during the Summer Solstice, directly at the heart of Amsterdam.  The diverse rooms of talks and conference itself has its own perks – let it be an exclusive sight of pink flamingos, or the heritage the oldest rooms represent.
+			Want to stay in touch as we announce more exciting details? Sign up to our mainglist.
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form action="https://ing.us12.list-manage.com/subscribe/post?u=2875b5a291837137bb999712f&amp;id=98bf0c0dd2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+					<div class="mc-field-group">
+						<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+					</label>
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</div>
+					<div class="mc-field-group">
+						<label for="mce-FNAME">First Name </label>
+						<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+					</div>
+					<div class="mc-field-group">
+						<label for="mce-LNAME">Last Name </label>
+						<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+					</div>
+					<div id="mce-responses" class="clear" style="margin-top: 1rem">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2875b5a291837137bb999712f_98bf0c0dd2" tabindex="-1" value=""></div>
+				    <div class="clear"><p><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-wrap btn-primary"></p>
+				    </div>
+				    </div>
+				    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
 		</p>
 	</div>
-	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-		<div id="map"><!-- Adding Google Maps --></div>
-     	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-	</div>
 </div>
-
-<!-- Fourth Row -->
-<div id="Testimonials" class="row row-b">
-	<div class="col-lg-12 col-xl-12">
-		<h1 class="heading-b-xxxl" style="text-align: center">Testimonials</h1>
-	</div>
-	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat.</p>
-	</div>
-</div>
-
-<!-- Fifth Row -->
-<div id="Register" class="row">
-	<div class="col-lg-12 col-xl-12">
-		<h1 class="heading-b-xxxl" style="text-align: center">Register</h1>
-	</div>
-	<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-		<p>Want to keep up to date as we announce more exciting details? Sign up to our mailing list or get directly <a href=mailto:xd-conf@ing.nl>in touch</a>.
-		</p>
-	</div>
-</div>
+<!-- END Eigth Row -->

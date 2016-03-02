@@ -31,7 +31,7 @@ angular.module('ingExperience', [
 			});
 		}
 	}
-}]).run(function(){
+}]).run(['$rootScope', '$location', function ($rootScope, $location) {
 	/**
 	 * Close menu if opened on hastag change
 	 * Is a hack for XD website because it uses anchors
@@ -46,7 +46,13 @@ angular.module('ingExperience', [
 				.trigger('click');
 		}
 	});
-});
+	/**
+	 * Set speaker scope
+	 */
+	$rootScope.gotoSpeaker = function ( path ) {
+		window.location.assign('speakers/' + path + '.html');
+	};
+}]);
 
 /**
  * Custom Google Maps
@@ -64,11 +70,13 @@ function initMap() {
 	    }], f = 0; f < e.length; f++) {
 	    var g = e[f],
 	        h = new google.maps.LatLng(g.lat, g.lng);
+	    /*
 	    new google.maps.Marker({
 	        position: h,
 	        map: b,
 	        icon: new google.maps.MarkerImage("http://designing-experiences.github.io/img/pointer.png", null, null, null, new google.maps.Size(60, 88)),
 	        optimized: !1
 	    })
+	    */
 	}
 }
