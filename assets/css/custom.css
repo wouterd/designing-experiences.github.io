@@ -157,6 +157,18 @@ label[class="heading-b-xl"] {
 }
 
 /**
+ * Button animations
+ */
+.btn:hover,
+.btn:focus {
+    -webkit-animation-name: woooohaaaaaa;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+/**
  * Media Query for mobile
  */
 
