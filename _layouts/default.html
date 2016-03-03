@@ -53,7 +53,11 @@
 
 		<!-- CUSTOM CSS FOR EXPERIENCE WEBSITE -->
 		<link rel="stylesheet" href="assets/css/custom.css">
+		<link rel="stylesheet" href="assets/css/head.css">
 		<script src="assets/js/app.js"></script>
+
+		<!-- EXP CONF JS -->
+		<script src="assets/js/expConf.js"></script>
 
 	</head>
 	<body class="tg">
@@ -61,11 +65,12 @@
 		<main role="main" data-current-content="*">
 			<!-- BRANDBAR FOR BIG SCREENS -->
 			<div class="row row-noPadding">
-				<div class="brandbar brandbar-a">
-					<div class="brandbar-image" ng-style="backgroundImage" style="background-image: url('assets/img/header.jpg'); margin-top: -1.25rem"></div>
-					<div class="container">
-						<img src="assets/img/event-logo.svg" class="eventLogo">
-					</div>
+				<div id="headBar" class="brandbar brandbar-a">
+					<div class="brandbar-image" ng-style="backgroundImage" style="background-color: #60A6DA; margin-top: -1.25rem"></div>
+					
+					<img src="assets/img/event-logo.svg" class="eventLogo">
+					
+					{% include head.html %} 
 				</div>
 			</div>
 

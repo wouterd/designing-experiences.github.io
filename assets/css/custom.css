@@ -7,10 +7,6 @@
 
 .eventLogo {
 	position: absolute;
-    width: 26%;
-    left: 50%;
-    margin-left: -13%;
-    margin-top: 2%;
 }
 
 .row:not(:first-child) {
@@ -193,9 +189,16 @@ label[class="heading-b-xl"] {
 /* EVERYTHING LARGER THAN 680 */
 @media only screen and (min-width: 680px) {
     .brandbar-a {
+        /* height:495px !important; */
         display:block !important;
     }
     .brandbar-b {
         display:none !important;
+    }
+    .eventLogo {
+        width: 24%;
+        left: 50%;
+        margin-left: -12%;
+        margin-top: 4%;
     }
 }
