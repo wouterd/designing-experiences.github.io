@@ -17,8 +17,7 @@ angular.module('gTopNavigation').service('gTopNavigationData', function(){
         {"href": "/#Speakers", "name": "Speakers"},
         {"href": "/#Location", "name": "Location"},
         {"href": "/#Register", "name": "Register"},
-        {"href": "/#NeedHelp", "name": "Need Help?"},
-        {"href": "/#StayInTouch", "name": "Stay in Touch"}
+        {"href": "/#NeedHelp", "name": "Get in Touch"}
     ];
     
     // data.segments = [];

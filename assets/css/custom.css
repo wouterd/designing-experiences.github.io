@@ -104,6 +104,13 @@ div[class^="label-"] p {
 }
 
 /**
+ * Mailchimp labels
+ */
+label[class="heading-b-xl"] {
+    margin-top: 12px;
+}
+
+/**
  * SPEAKERS
  */
 .speaker {
