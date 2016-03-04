@@ -278,17 +278,29 @@ label[class="heading-b-xl"] {
         padding-left: .5rem;
         padding-right: .5rem;
     }
+
+    .eventLogo {
+        position: absolute;
+        height: 200px;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: 3%;
+        width: 200px;
+        display: none;
+    }
 }
 
-/* EVERYTHING LARGER in WIDTH THAN 680 */
-@media only screen and (min-width: 680px) {
-    /*
-    .brandbar-a {
-        display:block !important;
-    }
-    .brandbar-b {
-        display:none !important;
-    }
-    */
+/* EVERYTHING SMALLER in WIDTH THAN 400 */
+@media only screen and (max-width: 400px) {
 
+    .conferenceLocation {
+        font-size: 1.25rem;
+        top:40%;
+    }
+
+    .conferenceDate {
+        font-size: 1rem;
+        top:45%;
+    }
+    
 }
