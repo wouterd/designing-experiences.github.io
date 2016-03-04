@@ -3,11 +3,11 @@
  */
 .Head {
     position: absolute;
-    width: 320px;
+    width: 42%;
     left: 50%;
-    margin-left: -160px;
+    margin-left: -21%;
     bottom: 20px;
-    height: 320px;
+    height: 42%;
 }
 
 @-webkit-keyframes BRAINITCH {
