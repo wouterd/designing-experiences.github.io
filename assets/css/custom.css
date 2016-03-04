@@ -73,6 +73,7 @@ div[class^="conference"] {
     background-color: #D8D8D8;
     height: 200px;
     border-radius: .5rem;
+    overflow: none; /* Fix for placing heads properly responsive */
 }
 .speakersBlok img {
     height: 164px;
