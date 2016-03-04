@@ -7,6 +7,32 @@
 
 .eventLogo {
 	position: absolute;
+    height: 24%;
+    left: 50%;
+    margin-left: -12%;
+    margin-top: 3%;
+    width: 24%;
+    display: none; /* this will be set to block in expConf.js */
+}
+
+div[class^="conference"] {
+    position: absolute;
+    color: #FFF;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+.conferenceLocation {
+    font-size: 1.75rem;
+    top: 36%;
+    display: none; /* this will be set to block in expConf.js */
+}
+.conferenceDate {
+    font-size: 1.25rem;
+    top: 43%;
+    display: none; /* this will be set to block in expConf.js */
 }
 
 .row:not(:first-child) {
@@ -247,10 +273,7 @@ label[class="heading-b-xl"] {
         display:block !important;
     }
     */
-    .eventLogo {
-        width: 40%;
-        margin-left: -20%;
-    }
+
     .row {
         padding-left: .5rem;
         padding-right: .5rem;
@@ -267,31 +290,5 @@ label[class="heading-b-xl"] {
         display:none !important;
     }
     */
-    .eventLogo {
-        height: 24%;
-        left: 50%;
-        margin-left: -12%;
-        margin-top: 3%;
-        width: 24%;
-        display: none; /* this will be set to block in expConf.js */
-    }
-    div[class^="conference"] {
-        position: absolute;
-        color: #FFF;
-        width: 400px;
-        left: 50%;
-        margin-left: -200px;
-        text-align: center;
-    }
 
-    .conferenceLocation {
-        font-size: 1.75rem;
-        top: 36%;
-        display: none; /* this will be set to block in expConf.js */
-    }
-    .conferenceDate {
-        font-size: 1.25rem;
-        top: 43%;
-        display: none; /* this will be set to block in expConf.js */
-    }
 }
