@@ -212,7 +212,7 @@ label[class="heading-b-xl"] {
  * Media Query for mobile
  */
 
-/* EVERYTHING SMALLER THAN 680 */
+/* EVERYTHING SMALLER in WIDTH THAN 680 */
 @media only screen and (max-width: 680px) {
     .brandbar-a {
         display:none !important;
@@ -230,7 +230,18 @@ label[class="heading-b-xl"] {
     }
 }
 
-/* EVERYTHING LARGER THAN 680 */
+/* EVERYTHING SMALLER in HEIGHT THAN 500 */
+@media only screen and (max-height: 500px) {
+    .eventLogo {
+        margin-top: 1% !important;
+    }
+    .conferenceLocation {
+        font-size: 1.7rem !important;
+        top: 32% !important;
+    }
+}
+
+/* EVERYTHING LARGER in WIDTH THAN 680 */
 @media only screen and (min-width: 680px) {
     .brandbar-a {
         /* height:495px !important; */
@@ -243,7 +254,7 @@ label[class="heading-b-xl"] {
         height: 24%;
         left: 50%;
         margin-left: -12%;
-        margin-top: 4%;
+        margin-top: 3%;
         width: 24%;
     }
     div[class^="conference"] {
