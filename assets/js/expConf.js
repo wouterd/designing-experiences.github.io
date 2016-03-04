@@ -7,6 +7,14 @@ function setBrandbar(i){
 		.height(jQuery(window).height() - 82);
 }
 
+function initHead(){
+	jQuery('.Head')
+		.animate({
+			'opacity': 1,
+			'margin-left': '-21%'
+		}, 'slow');
+}
+
 function flashTheBrain(){
 	/**
 	 * Orange and Red
@@ -57,11 +65,52 @@ function wobbleTheBrain(input){
 	}
 }
 
+var rotateTheBrain_i = 0; // global scope I
+var rotateTheBrainLastScroll = 0;
+var rotateTheBrainReversing = false;
+function rotateTheBrain(event){
+
+	if(rotateTheBrainReversing === false){
+		var st = jQuery(window).scrollTop();
+		if (st > rotateTheBrainLastScroll){
+
+			rotateTheBrain_i += 2;
+
+			jQuery('.Head')
+				.css('transform', 'rotateY(' + rotateTheBrain_i + 'deg)')
+
+		} else {
+			
+			rotateTheBrainReversing = true;
+
+			var rotateInterval = setInterval(function(){
+				
+				if(rotateTheBrain_i < 1){
+					clearInterval(rotateInterval);
+					rotateTheBrainReversing = false;
+				} else {
+					rotateTheBrain_i--;
+					jQuery('.Head')
+				      		.css('transform','rotateY('+rotateTheBrain_i+'deg)'); 
+					
+				}
+			}, 5);
+			
+		}
+		rotateTheBrainLastScroll = st;
+	}
+
+}
+
 /**
  * On start, resize etc
  */
 jQuery(document)
 	.ready(function(){
+		/**
+		 * Init the head
+		 */
+		initHead();
 		/**
 		 * Flip the brain on 'R' key
 		 */
@@ -76,6 +125,10 @@ jQuery(document)
 			})
 		setBrandbar();
 		flashTheBrain();
+		jQuery(window)
+			.scroll(function(event){
+				rotateTheBrain(event);
+			});
 	});
 
 jQuery(window)

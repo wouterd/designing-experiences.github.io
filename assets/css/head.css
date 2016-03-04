@@ -5,7 +5,8 @@
     position: absolute;
     width: 42%;
     left: 50%;
-    margin-left: -21%;
+    margin-left: -50%; /* this will be set to 21% in expConf.js */
+    opacity: 0; /* this will be set to 1 in expConf.js */
     bottom: 20px;
     height: 42%;
 }
