@@ -212,24 +212,6 @@ label[class="heading-b-xl"] {
  * Media Query for mobile
  */
 
-/* EVERYTHING SMALLER in WIDTH THAN 680 */
-@media only screen and (max-width: 680px) {
-    .brandbar-a {
-        display:none !important;
-    }
-    .brandbar-b {
-        display:none !important; /* ALSO SET TO NONE FOR NOW */
-    }
-    .eventLogo {
-        width: 40%;
-        margin-left: -20%;
-    }
-    .row {
-        padding-left: .5rem;
-        padding-right: .5rem;
-    }
-}
-
 /* EVERYTHING SMALLER in WIDTH THAN 1200 */
 @media only screen and (max-width: 1200px) {
     iframe {
@@ -255,15 +237,36 @@ label[class="heading-b-xl"] {
     }
 }
 
+/* EVERYTHING SMALLER in WIDTH THAN 680 */
+@media only screen and (max-width: 680px) {
+    /*
+    .brandbar-a {
+        display:none !important;
+    }
+    .brandbar-b {
+        display:block !important;
+    }
+    */
+    .eventLogo {
+        width: 40%;
+        margin-left: -20%;
+    }
+    .row {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
 /* EVERYTHING LARGER in WIDTH THAN 680 */
 @media only screen and (min-width: 680px) {
+    /*
     .brandbar-a {
-        /* height:495px !important; */
         display:block !important;
     }
     .brandbar-b {
         display:none !important;
     }
+    */
     .eventLogo {
         height: 24%;
         left: 50%;
