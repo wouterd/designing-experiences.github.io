@@ -1,7 +1,6 @@
 /**
  * Custom CSS for experience website
  */
-
 .tg .l-h-10 {
     height: 4px!important;
 }
@@ -73,7 +72,7 @@ div[class^="conference"] {
     background-color: #D8D8D8;
     height: 200px;
     border-radius: .5rem;
-    overflow: none; /* Fix for placing heads properly responsive */
+    overflow: hidden; /* Fix for placing heads properly responsive */
 }
 .speakersBlok img {
     height: 164px;
@@ -128,16 +127,14 @@ div[class^="label-"] {
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     padding: .05rem .25rem .05rem 0.25rem;
+    min-height: 1.75rem;
 }
-
 div[class^="label-"] h2 {
     font-size: 1rem;
 }
-
 div[class^="label-"] p {
     margin-bottom: 0;
 }
-
 div[class^="label-"] b {
     color: #FFF;
 }
