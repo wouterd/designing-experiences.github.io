@@ -157,9 +157,9 @@ label[class="heading-b-xl"] {
 .speaker:hover,
 .speaker:focus {
     -webkit-animation-name: woooohaaaaaa;
-    -webkit-animation-duration: 0.8s;
+    -webkit-animation-duration: 0.5s;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 1; /* stop after 1 time */
     -webkit-animation-timing-function: linear;
 }
 
@@ -202,9 +202,9 @@ label[class="heading-b-xl"] {
 .btn:hover,
 .btn:focus {
     -webkit-animation-name: woooohaaaaaa;
-    -webkit-animation-duration: 0.8s;
+    -webkit-animation-duration: 0.5s;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 1; /* stop after 1 time */
     -webkit-animation-timing-function: linear;
 }
 
@@ -227,6 +227,20 @@ label[class="heading-b-xl"] {
     .row {
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+}
+
+/* EVERYTHING SMALLER in WIDTH THAN 1200 */
+@media only screen and (max-width: 1200px) {
+    iframe {
+        display: none;
+    }
+}
+
+/* EVERYTHING LARGER in WIDTH THAN 1200 */
+@media only screen and (min-width: 1200px) {
+    iframe {
+        display: block;
     }
 }
 
@@ -256,6 +270,7 @@ label[class="heading-b-xl"] {
         margin-left: -12%;
         margin-top: 3%;
         width: 24%;
+        display: none; /* this will be set to block in expConf.js */
     }
     div[class^="conference"] {
         position: absolute;
@@ -269,9 +284,11 @@ label[class="heading-b-xl"] {
     .conferenceLocation {
         font-size: 1.75rem;
         top: 36%;
+        display: none; /* this will be set to block in expConf.js */
     }
     .conferenceDate {
         font-size: 1.25rem;
         top: 43%;
+        display: none; /* this will be set to block in expConf.js */
     }
 }

@@ -8,11 +8,31 @@ function setBrandbar(i){
 }
 
 function initHead(){
-	jQuery('.Head')
+	jQuery('.Head') // fade in head
 		.animate({
 			'opacity': 1,
-			'margin-left': '-21%'
-		}, 'slow');
+			'margin-left': '-21%',
+			'width': '42%',
+			'height': '42%'
+		}, 'slow', function(){
+
+			jQuery('.eventLogo')
+				.fadeIn('slow');
+
+			setTimeout(function(){
+				jQuery('.conferenceLocation')
+						.fadeIn('slow', function(){
+							jQuery('.conferenceDate')
+								.fadeIn('slow');
+						});
+			}, 150);
+
+			setTimeout(function(){
+				jQuery('.conferenceDate')
+						.fadeIn('slow');
+			}, 300)
+
+		});
 }
 
 function flashTheBrain(){
