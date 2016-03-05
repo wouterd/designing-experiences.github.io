@@ -17,8 +17,15 @@ jQuery(document)
 		 * Set the size of the brandbar
 		 */
 		function setBrandbar(i){
+
+			var newHeight = jQuery(window).height() - 82;
+
+			if(newHeight < 460){
+				newHeight = 460; // set to 460px, otherwise it becomes to small
+			}
+
 			jQuery('#headBar')
-				.height(jQuery(window).height() - 82); // 82 = The Guide nav height
+				.height(newHeight); // 82 = The Guide nav height
 		}
 
 		/**
