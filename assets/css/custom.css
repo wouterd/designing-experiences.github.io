@@ -6,7 +6,7 @@
 }
 
 .eventLogo {
-	position: absolute;
+    position: absolute;
     height: 24%;
     left: 50%;
     margin-left: -12%;
@@ -43,7 +43,7 @@ div[class^="conference"] {
  */
 
 .row:not(:first-child) {
-	padding-top: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -51,7 +51,7 @@ div[class^="conference"] {
  * This is temporary
  */
 .row-noPadding {
-	padding-top: 0 !important;
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 /**
@@ -62,7 +62,7 @@ div[class^="conference"] {
  * Uneven rows
  */
 .row-b {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 /**
@@ -96,7 +96,7 @@ a[class^="label"] {
     width: 100%;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
-    padding: .25rem .25rem .25rem .4rem;
+    padding: .05rem .25rem .05rem 0.25rem;
     background-color: #525199;
     border-radius: .2rem;
     text-decoration: none;
@@ -122,6 +122,7 @@ span[class^="label-"] {
 
 div[class^="label-"] {
     position: relative;
+    text-align:center;
     margin-top: -1.75rem;
     width: 100%;
     border-bottom-left-radius: .5rem;
@@ -139,19 +140,31 @@ div[class^="label-"] b {
     color: #FFF;
 }
 
-.label-design {
+.color-serviceDesign {
+    color:#60A6DA;
+}
+.label-serviceDesign {
     background-color:#60A6DA;
 }
 
+.color-leanStartup {
+    color:#CD66A4;
+}
 .label-leanStartup {
     background-color:#CD66A4;
 }
 
+.color-APIs {
+    color:#D0D93C;
+}
 .label-APIs {
     background-color:#D0D93C;
 }
 
-.label-leadership {
+.color-digitalExperiences {
+    color:#349651;
+}
+.label-digitalExperiences {
     background-color:#349651;
 }
 
@@ -173,20 +186,6 @@ label[class="heading-b-xl"] {
 /*
 .speaker:hover,
 .speaker:focus {
-    -webkit-animation-name: woooohaaaaaa;
-    -webkit-animation-duration: 0.5s;
-    -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-}
-*/
-
-/**
- * Button animations
- */
-/*
-.btn:hover,
-.btn:focus {
     -webkit-animation-name: woooohaaaaaa;
     -webkit-animation-duration: 0.5s;
     -webkit-transform-origin:50% 50%;
@@ -276,6 +275,11 @@ label[class="heading-b-xl"] {
 
     .eventLogo {
         margin-top: 1% !important;
+    }
+
+    .conferenceLocation {
+        font-size: 1.7rem !important;
+        top: 32% !important;
     }
 
 }
