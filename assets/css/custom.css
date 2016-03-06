@@ -170,26 +170,30 @@ label[class="heading-b-xl"] {
     cursor: pointer;
 }
 
+/*
 .speaker:hover,
 .speaker:focus {
     -webkit-animation-name: woooohaaaaaa;
     -webkit-animation-duration: 0.5s;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: 1; /* stop after 1 time */
+    -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
 }
+*/
 
 /**
  * Button animations
  */
+/*
 .btn:hover,
 .btn:focus {
     -webkit-animation-name: woooohaaaaaa;
     -webkit-animation-duration: 0.5s;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: 1; /* stop after 1 time */
+    -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
 }
+*/
 
 /**
  * MEDIA QUERIES
