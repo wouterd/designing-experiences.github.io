@@ -76,6 +76,7 @@ jQuery(document)
 
 			jQuery('#headBar')
 				.height(newHeight); // 82 = The Guide nav height
+
 		}
 
 		/**

@@ -55,8 +55,9 @@
 }
 
 #signUp > span {
-    top: 0.15rem;
     position: relative;
+    top: 0.15rem;
+    padding-right: .5rem;
 }
 /**
  * End Signup DIV
