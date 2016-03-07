@@ -92,6 +92,7 @@ blockquote {
     font-weight: bold;
     text-align: center !important;
     font-style: italic;
+    line-height: .75rem !important;
     color: #767676;
 }
 img[class^="blueQuote"] {
