@@ -10,7 +10,7 @@
     right: -90px;
     top: 4rem;
     color: #FFF;
-    z-index: 999999999;
+    z-index: 2; /* before blue but after menu */
     background-color: #ff6200;
     padding: .8rem;
     font-weight: bold;
