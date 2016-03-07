@@ -1,18 +1,106 @@
 /**
  * Custom CSS for experience website
  */
+
+/**
+ * Register label
+ */
+#registerLabel {
+    position: fixed;
+    right: -90px;
+    top: 4rem;
+    color: #FFF;
+    z-index: 999999999;
+    background-color: #ff6200;
+    padding: .8rem;
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    cursor: pointer;
+    transition: 1s;
+}
+#registerLabel.show {
+    right: 0px;
+}
+/* EVERYTHING SMALLER in WIDTH THAN 768 */
+@media only screen and (max-width: 768px) {
+    #registerLabel {
+        right: 0px !important;
+    }
+}
+
+/**
+ * Signup DIV
+ */
+#signUp {
+    position: absolute;
+    right: 50%;
+    margin-right: -560px;
+    top: 1.4rem;
+    width: 340px;
+    text-indent: right;
+    transition: 1s;
+}
+/* EVERYTHING SMALLER in WIDTH THAN 1200 */
+@media only screen and (max-width: 1200px) {
+    #signUp {
+        margin-right: -480px;
+    }
+}
+/* EVERYTHING SMALLER in WIDTH THAN 992 */
+@media only screen and (max-width: 992px) {
+    #signUp {
+        margin-right: -372px;
+    }
+}
+
+#signUp > span {
+    top: 0.15rem;
+    position: relative;
+}
+/**
+ * End Signup DIV
+ */
+
 .tg .l-h-10 {
     height: 4px!important;
 }
-
 .eventLogo {
     position: absolute;
-    height: 24%;
+    height: 280px;
     left: 50%;
-    margin-left: -12%;
-    margin-top: 3%;
-    width: 24%;
+    margin-left: -140px;
+    top: 6%;
+    width: 280px;
     display: none; /* this will be set to block in expConf.js */
+    transition: 1.5s;
+}
+.quote {
+    min-height: 22rem;
+    padding-top:7rem !important;
+    padding-bottom: 7rem !important;
+}
+blockquote {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center !important;
+    font-style: italic;
+    color: #767676;
+}
+img[class^="blueQuote"] {
+    width: 4rem;
+    opacity: .9;
+    transition: 1.5s;
+}
+.blueQuoteDown {
+    transform: rotate(180deg);
+}
+
+/**
+ * Heading sizes
+ */
+.tg h1 {
+    margin-top: 1.25rem;
 }
 
 /**
@@ -75,9 +163,9 @@ div[class^="conference"] {
     overflow: hidden; /* Fix for placing heads properly responsive */
 }
 .speakersBlok img {
-    height: 164px;
-    margin-left: 1.25rem;
-    margin-top: .5rem;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 .speakersBlokQuestion {
     position: absolute;
@@ -151,14 +239,14 @@ div[class^="label-"] b {
     color:#CD66A4;
 }
 .label-leanStartup {
-    background-color:#CD66A4;
+    background-color:#525199;
 }
 
 .color-APIs {
     color:#D0D93C;
 }
 .label-APIs {
-    background-color:#D0D93C;
+    background-color:#AB0066;
 }
 
 .color-digitalExperiences {
@@ -166,6 +254,25 @@ div[class^="label-"] b {
 }
 .label-digitalExperiences {
     background-color:#349651;
+}
+
+/** 
+ * Balls
+ */
+span[class^="line-"] {
+    border-bottom: 2px solid;
+}
+.line-serviceDesign {
+    border-bottom-color:#60A6DA !important;
+}
+.line-leanStartup {
+    border-bottom-color:#525199 !important;
+}
+.line-APIs {
+    border-bottom-color:#AB0066 !important;
+}
+.line-digitalExperiences {
+    border-bottom-color:#349651 !important;
 }
 
 /**
@@ -243,6 +350,7 @@ label[class="heading-b-xl"] {
         padding-right: .5rem;
     }
 
+    /*
     .eventLogo {
         position: absolute;
         height: 200px;
@@ -252,34 +360,24 @@ label[class="heading-b-xl"] {
         width: 200px;
         display: none;
     }
+    */
 
 }
 
 /* EVERYTHING SMALLER in WIDTH THAN 400 */
 @media only screen and (max-width: 400px) {
 
-    .conferenceLocation {
-        font-size: 1.25rem;
-        top:40%;
-    }
-
-    .conferenceDate {
-        font-size: 1rem;
-        top:45%;
+    img[class^="blueQuote"] {
+        width: 2.5rem;
     }
 
 }
 
-/* EVERYTHING SMALLER in HEIGHT THAN 500 */
-@media only screen and (max-height: 500px) {
+/* EVERYTHING SMALLER in HEIGHT THAN 630 */
+@media only screen and (max-height: 650px) {
 
     .eventLogo {
-        margin-top: 1% !important;
-    }
-
-    .conferenceLocation {
-        font-size: 1.7rem !important;
-        top: 32% !important;
+        top: -5% !important;
     }
 
 }

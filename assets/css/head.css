@@ -3,12 +3,24 @@
  */
 .Head {
     position: absolute;
-    width: 100%;  /* this will be set to 42% in expConf.js */
+    width: 280px;
+    height: 280px;
     left: 50%;
-    margin-left: -45%; /* this will be set to 21% in expConf.js */
+    margin-left: -140px;
     opacity: 0; /* this will be set to 1 in expConf.js */
     bottom: 20px;
-    height: 100%;  /* this will be set to 42% in expConf.js */
+    transition: 1.5s;
+}
+
+/* EVERYTHING SMALLER in HEIGHT THAN 630 */
+@media (max-height: 700px) {
+
+    .Head {
+        width:240px;
+        height:240px;
+        margin-left: -120px;
+    }
+
 }
 
 @-webkit-keyframes BRAINITCH {

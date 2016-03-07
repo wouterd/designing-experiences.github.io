@@ -5,7 +5,6 @@ angular.module('gTopNavigation').service('gTopNavigationData', function(){
         {"href": "/#XDConf", "name": "About"},
         {"href": "/#Speakers", "name": "Speakers"},
         {"href": "/#Location", "name": "Location"},
-        {"href": "/#Register", "name": "Register"},
         {"href": "/#GetInTouch", "name": "Get in Touch"}
     ];
 

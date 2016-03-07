@@ -12,16 +12,66 @@ jQuery(document)
 			var rotateTheBrain_i = 0; // global scope I
 			var rotateTheBrainLastScroll = 0;
 			var rotateTheBrainReversing = false;
+			var heightOfMenuBar = 82;
+
+		/**
+		 * Init the register button
+		 */
+		function setRegisterButtonInit(event){
+			jQuery('#registerLabel')
+				.click(function(){
+					window
+						.location
+						.assign('register.html');
+				})
+		}
+
+		/**
+		 * Set register button
+		 */
+		function setRegisterButton(event){
+			
+			var st = jQuery(window)
+						.scrollTop();
+
+			/**
+			 * Determine if label should be shown
+			 */
+			if(st > heightOfMenuBar){
+				if(!jQuery('#registerLabel').hasClass('show')){
+					jQuery('#registerLabel')
+						.addClass('show');
+				}
+			} else {
+				if(jQuery('#registerLabel').hasClass('show')){
+					jQuery('#registerLabel')
+						.removeClass('show');
+				}
+			}
+
+			/**
+			 * Determine if label should have fulltext
+			 */
+			if(st > jQuery('#headBar').height()){
+				jQuery('#registerLabel')
+					.text('R');
+			} else {
+				jQuery('#registerLabel')
+					.text('Register');
+			}
+
+		}
 
 		/**
 		 * Set the size of the brandbar
 		 */
 		function setBrandbar(i){
 
-			var newHeight = jQuery(window).height() - 82;
+			var newHeight = jQuery(window).height() - heightOfMenuBar;
+			var heightLimit = 590;
 
-			if(newHeight < 460){
-				newHeight = 460; // set to 460px, otherwise it becomes to small
+			if(jQuery(window).height() < heightLimit){
+				newHeight = heightLimit - heightOfMenuBar; // set to 572px, otherwise it becomes to small
 			}
 
 			jQuery('#headBar')
@@ -34,10 +84,7 @@ jQuery(document)
 		function initHead(){
 			jQuery('.Head') // fade in head
 				.animate({
-					'opacity': 1,
-					'margin-left': '-21%',
-					'width': '42%',
-					'height': '42%'
+					'opacity': 1
 				}, 'slow', function(){
 
 					jQuery('.eventLogo')
@@ -179,11 +226,22 @@ jQuery(document)
 				flashTheBrain();
 				/**
 				 * rotate brain on scroll effect
+				 * DISABLED
 				 */
+				/*
 				jQuery(window)
 					.scroll(function(event){
 						rotateTheBrain(event);
 					});
+				*/
+				/**
+				 * set the register button when needed
+				 */
+				jQuery(window)
+					.scroll(function(event){
+						setRegisterButton(event);
+					});
+				setRegisterButtonInit();
 		/**
 		 * set size on change
 		 */

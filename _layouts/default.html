@@ -62,6 +62,13 @@
 	</head>
 	<body class="tg">
 		<header id="Home" top-navigation></header>
+		<div id="signUp">
+			<span>20 &amp; 21 June 2016 / Amsterdam</span>
+			<a href="register.html" target="_self" class="ng-scope">
+				<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Register</span>
+			</a>
+		</div>
+		<div id="registerLabel">Register</div>
 		<main role="main" data-current-content="*">
 			<!-- BRANDBAR FOR BIG SCREENS -->
 			<div class="row row-noPadding">
@@ -69,9 +76,6 @@
 					<div class="brandbar-image" ng-style="backgroundImage" style="background-color: #60A6DA; margin-top: -1.25rem"></div>
 					
 					<img src="assets/img/event-logo.svg" class="eventLogo">
-
-					<div class="conferenceLocation">Amsterdam, The Netherlands</div>
-					<div class="conferenceDate">20 &amp; 21 June 2016</div>
 					
 					{% include head.html %} 
 				</div>
