@@ -53,6 +53,12 @@
         margin-right: -372px;
     }
 }
+/* EVERYTHING SMALLER in WIDTH THAN 768 */
+@media only screen and (max-width: 768px) {
+    #signUp {
+        display: none !important;
+    }
+}
 
 #signUp > span {
     position: relative;
