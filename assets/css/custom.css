@@ -92,15 +92,24 @@ blockquote {
     font-weight: bold;
     text-align: center !important;
     font-style: italic;
-    line-height: .75rem !important;
+    line-height: 2rem !important;
     color: #767676;
 }
 img[class^="blueQuote"] {
     width: 4rem;
     opacity: .9;
     transition: 1.5s;
+    display: inline-block;
+    position: absolute;
+    
+}
+.blueQuoteUp {
+    top: -1rem;
+    left: -1rem;
 }
 .blueQuoteDown {
+    bottom: 3rem;
+    right: -1rem;
     transform: rotate(180deg);
 }
 
@@ -377,6 +386,16 @@ label[class="heading-b-xl"] {
 
     img[class^="blueQuote"] {
         width: 2.5rem;
+    }
+
+    .blueQuoteUp {
+        top: 0rem;
+        left: 0rem;
+    }
+    .blueQuoteDown {
+        bottom: 4rem;
+        right: 0rem;
+        transform: rotate(180deg);
     }
 
 }
