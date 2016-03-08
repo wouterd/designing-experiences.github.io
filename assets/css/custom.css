@@ -30,6 +30,19 @@
 }
 
 /**
+ * Add a right solid border
+ */
+.rightSolidBorder {
+    border-right: 1px solid #333 !important;
+}
+/* EVERYTHING SMALLER in WIDTH THAN 1199 (based on 1200px) */
+@media only screen and (max-width: 1199px) {
+    .rightSolidBorder {
+        border-right: 0px solid #333 !important;
+    }
+}
+
+/**
  * Set headbar
  */
 #headBar {
@@ -240,8 +253,8 @@ div[class^="label-"] {
     width: 100%;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
-    padding: .05rem .25rem .05rem 0.25rem;
-    min-height: 1.75rem;
+    padding: .5rem .25rem .05rem 0.25rem;
+    min-height: 2.75rem;
 }
 div[class^="label-"] h2 {
     font-size: 1rem;
