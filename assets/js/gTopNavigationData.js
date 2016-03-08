@@ -8,7 +8,7 @@ angular.module('gTopNavigation').service('gTopNavigationData', function(){
         {"href": "/#GetInTouch", "name": "Get in Touch"}
     ];
 
-    data.segmentActive = 'Experience Design';
+    data.segmentActive = 'XD Conf';
 
     return data;
 });
