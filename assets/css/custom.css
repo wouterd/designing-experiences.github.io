@@ -30,6 +30,14 @@
 }
 
 /**
+ * Set headbar
+ */
+#headBar {
+    overflow: hidden;
+    margin-top: -1.25rem;
+}
+
+/**
  * Signup DIV
  */
 #signUp {

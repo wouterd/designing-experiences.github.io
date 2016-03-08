@@ -12,7 +12,7 @@ jQuery(document)
 			var rotateTheBrain_i = 0; // global scope I
 			var rotateTheBrainLastScroll = 0;
 			var rotateTheBrainReversing = false;
-			var heightOfMenuBar = 82;
+			var heightOfMenuBar = 62;
 
 		/**
 		 * Init the register button
@@ -61,6 +61,123 @@ jQuery(document)
 			}
 
 		}
+
+		/**
+		 * Start the movement of objects
+		 */
+		function startMovements(){
+
+			var items_i = 0;
+
+			setInterval(function(){
+
+				var currentCircle = 'circle_' + (items_i++);
+
+				jQuery('#headBar')
+					.prepend('<img id="' + currentCircle + '">');
+
+				var currentCircleObj = jQuery('#' + currentCircle);
+
+				/** 
+				 * Set the actual circle
+				 */
+				currentCircleObj
+					.attr('src', 'assets/img/circle' + Math.round(Math.random() * (3 - 1) + 1) + '.svg')
+
+				/**
+				 * Determine height
+				 */
+				currentCircleObj
+					.css('top', Math.round(Math.random() * (jQuery('#headBar').height() - 1) + 1) + 'px')
+
+				/**
+				 * Decide left or right, 1 = left, 2 = right
+				 */
+				if(Math.round(Math.random() * (2 - 1) + 1) === 1){
+					/**
+					 * Go left
+					 */
+					var direction = 'left';
+				} else {
+					/** 
+					 * Go right
+					 */
+					var direction = 'right';
+				}
+
+				currentCircleObj
+					.css(direction, '-100px')
+
+				var currentCircleDuration = Math.round(Math.random() * (12000 - 4000) + 4000);
+
+				var directionObject = {};
+					directionObject[direction] = jQuery(window).width() + 100;
+
+				currentCircleObj
+					.animate(directionObject, {
+						step: function(currentLeft, currentTotal){
+
+							if(Math.round(currentLeft) < (currentTotal.end / 2)){
+								/**
+								 * Arc goes up
+								 */
+								var newTop = parseInt(jQuery(currentCircleObj).css('top')) - 1;
+							} else {
+								/**
+								 * Arc goes down
+								 */
+								var newTop = parseInt(jQuery(currentCircleObj).css('top')) + 1;
+							}
+
+							jQuery(currentCircleObj)
+								.css('top', newTop + 'px')
+						},
+						duration: currentCircleDuration,
+						complete: function(t){
+							currentCircleObj
+								.remove()
+						}
+					})
+
+				/**
+				 * Stop on click
+				 */
+				currentCircleObj
+					.click(function() {
+					    currentCircleObj
+					    	.stop(true,false);
+
+					    /**
+					     * Calculate the location of the head with native JS
+					     */
+					    var headsObj = window.getComputedStyle(document.getElementsByClassName("Head")[0], null),
+					    	headsLocationLeft = parseInt(headsObj.left) - (parseInt(headsObj.width) / 2),
+					    	headsLocationRight = parseInt(headsObj.left) + (parseInt(headsObj.width) / 2);
+					    console.log(headsLocationLeft, headsLocationRight, headsObj.width);
+
+					    /**
+					     * Calculate if circle hits the head
+					     */
+					    console.log( jQuery(this).offset().left );
+						
+					    currentCircleObj
+					    	.animate({
+					    		top: Math.round(jQuery('#headBar').height() + 100) + 'px'
+					    	}, 'slow', function(){
+					    		jQuery(currentCircleObj)
+					    			.remove()
+					    	})
+
+					});
+
+			}, Math.round(Math.random() * (6200 - 3200) + 3200));
+
+		}
+
+		/**
+		 * Drop object on head
+		 */
+		function dropOnHead(){}
 
 		/**
 		 * Set the size of the brandbar
@@ -210,7 +327,16 @@ jQuery(document)
 				 */
 				jQuery(document)
 					.keydown(function(e){
-						if(e.keyCode == 82){
+
+						if(e.keyCode == 77){ /* when m is pressed */
+							startMovements();
+						}
+
+						if(e.keyCode == 68){ /* when d is pressed */
+							dropOnHead();
+						}
+
+						if(e.keyCode == 82){ /* when r is pressed */
 							wobbleTheBrain('start');
 						}
 					})
