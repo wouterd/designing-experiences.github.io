@@ -314,6 +314,25 @@ span[class^="line-"] {
 }
 
 /**
+ * Triangles 
+ */
+div[class^="triangle"] {
+    position: relative;
+    background-size: 63.3px 29.17px; 
+    width: 63.3px; /* total = 380 */
+    height: 29.17px; /* total = 175 */
+    left: 50%;
+    bottom: 1rem;
+    margin-left: -31.65px;
+}
+.triangle {
+    background-image: url("../img/arrow-a.png");
+}
+.triangle-b {
+    background-image: url("../img/arrow-b.png");
+}
+
+/**
  * Mailchimp labels
  */
 label[class="heading-b-xl"] {

@@ -46,12 +46,33 @@ angular.module('ingExperience', [
 				.trigger('click');
 		}
 	});
+	
 	/**
 	 * Set speaker scope
 	 */
 	$rootScope.gotoSpeaker = function ( path ) {
 		window.location.assign('speakers/' + path + '.html');
-	};
+	}
+
+	/**
+	 * Add triangles
+	 */
+	jQuery('.triangle')
+		.each(function(){
+			jQuery(this)
+				.append('<div class="triangle">')
+				.removeClass('triangle');
+		})
+		
+
+	jQuery('.triangle-b')
+		.each(function(){
+			jQuery(this)
+				.append('<div class="triangle-b">')
+				.removeClass('triangle-b');
+		})
+
+
 }]);
 
 /**
