@@ -22,7 +22,7 @@ jQuery(document)
 				.click(function(){
 					window
 						.location
-						.assign('register.html');
+						.assign('http://goo.gl/forms/A6SJ9c2jx7');
 				})
 		}
 
