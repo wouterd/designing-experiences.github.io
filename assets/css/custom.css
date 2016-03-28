@@ -10,7 +10,7 @@
     right: -90px;
     top: 4rem;
     color: #FFF;
-    z-index: 2; /* before blue but after menu */
+    z-index: 4; /* before blue but after menu */
     background-color: #ff6200;
     padding: .8rem;
     font-weight: bold;
@@ -358,6 +358,42 @@ label[class="heading-b-xl"] {
 }
 */
 
+#speaker {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #D8D8D8;
+    height: 200px;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+#speaker {
+    position: relative;
+    margin-right: 1rem;
+    top: 1.5rem;
+    background-color: #D8D8D8;
+    height: 10rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+#speaker img { /* TEMPORARY UNTIL REAL PHOTOS ARE AVAILABLE */
+    padding: .5rem;
+}
+
+.footer-social-links {
+    padding-left: 0 !important;
+}
+
+.speakerSocial {
+    list-style: none !important;
+}
+
+.speakerSocial a {
+    text-decoration: none !important;
+}
+
 /**
  * MEDIA QUERIES
  */
@@ -381,7 +417,15 @@ label[class="heading-b-xl"] {
 
 }
 
-/* EVERYTHING SMALLER in WIDTH THAN 1200 */
+/* EVERYTHING SMALLER in WIDTH THAN 992 */
+@media only screen and (max-width: 992px) {
+
+    #speaker {
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 1200px) {
 
     iframe {
