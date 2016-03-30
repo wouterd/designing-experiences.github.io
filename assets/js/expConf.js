@@ -9,10 +9,10 @@ jQuery(document)
 		/**
 		 * Scope globals
 		 */
-			var rotateTheBrain_i = 0; // global scope I
-			var rotateTheBrainLastScroll = 0;
-			var rotateTheBrainReversing = false;
-			var heightOfMenuBar = 62;
+			var rotateTheBrain_i = 0, // global scope I
+				rotateTheBrainLastScroll = 0,
+				rotateTheBrainReversing = false,
+				heightOfMenuBar = 62;
 
 		/**
 		 * Init the register button
@@ -203,7 +203,7 @@ jQuery(document)
 			jQuery('.Head') // fade in head
 				.animate({
 					'opacity': 1
-				}, 'slow', function(){
+				}, 2200, function(){
 
 					jQuery('.eventLogo')
 						.fadeIn('slow');
@@ -244,12 +244,18 @@ jQuery(document)
 													.attr('fill');
 					polsAndPaths
 						.eq(brainChunkToChange)
-						.css({fill: "white", transition: "100ms"});
+						.css({
+							fill: "white",
+							transition: "100ms"
+						});
 
 					setTimeout(function(){
 						polsAndPaths
 							.eq(brainChunkToChange)
-							.css({fill: brainChunkOriginalColor, transition: "100ms"});
+							.css({
+								fill: brainChunkOriginalColor,
+								transition: "100ms"
+							});
 					}, 120);
 
 				}, 200)
@@ -327,11 +333,6 @@ jQuery(document)
 				 */
 				jQuery(document)
 					.keydown(function(e){
-
-						if(e.keyCode == 77){ /* when m is pressed */
-							startMovements();
-						}
-
 						if(e.keyCode == 68){ /* when d is pressed */
 							dropOnHead();
 						}
@@ -351,6 +352,10 @@ jQuery(document)
 				 * Flashy brain animations
 				 */
 				flashTheBrain();
+				/**
+				 * Move circles
+				 */
+				startMovements();
 				/**
 				 * rotate brain on scroll effect
 				 * DISABLED

@@ -55,6 +55,14 @@ angular.module('ingExperience', [
 	}
 
 	/**
+	 * Fade in top
+	 */
+	jQuery('.brandbar-overlay')
+		.animate({
+			opacity: 0.82
+		}, 5200)
+
+	/**
 	 * Add triangles
 	 */
 	jQuery('.triangle')

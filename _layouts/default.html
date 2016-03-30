@@ -65,18 +65,29 @@
 		<header id="Home" top-navigation></header>
 		<div id="signUp">
 			<span>20 &amp; 21 June 2016 / Amsterdam</span>
-			<a href="http://goo.gl/forms/A6SJ9c2jx7" target="_self" class="ng-scope">
-				<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Register</span>
-			</a>
 		</div>
 		<div id="registerLabel">Register</div>
 		<main role="main" data-current-content="*">
 			<!-- BRANDBAR FOR BIG SCREENS -->
 			<div class="row row-noPadding">
 				<div id="headBar" class="brandbar">
-					<div class="brandbar-image" ng-style="backgroundImage" style="background-color: #60A6DA; margin-top: -1.25rem"></div>
+					<div class="brandbar-image" ng-style="backgroundImage" style="background-color: #000; background-image: url('assets/img/topBack.jpg'); z-index: 1"></div>
+					<div class="brandbar-image brandbar-overlay" ng-style="backgroundImage" style="background-color: transparent; background-image: url('assets/img/topOverlay.png'); opacity: 0; z-index: 3"></div>
 					
-					<img src="assets/img/event-logo.svg" class="eventLogo">
+					<!-- main text -->
+					<div class="col-xxs-10 col-xxs-offset-2" style="z-index: 4; margin-top: 4rem">
+						<h1 class="heading-b-xxxxl heading-main">Experience Design Conference</h1>
+						<h2 class="heading-b-xxxl heading-main">Amsterdam, Artis Zoo</h2>
+						<h2 class="heading-b-xxxl heading-main">20 &amp; 21 June 2016</h2>
+						<a href="http://goo.gl/forms/A6SJ9c2jx7" target="_self" class="ng-scope">
+							<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Register</span>
+						</a>
+					</div>
+
+					<!-- main banner -->
+					<div class="heading-banner">
+						<img src="assets/img/bannerLogo.svg">
+					</div>
 					
 					{% include head.html %} 
 				</div>

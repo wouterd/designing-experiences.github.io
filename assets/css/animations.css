@@ -14,9 +14,9 @@ img[id^="circle_"] {
     -webkit-filter: drop-shadow( -5px -5px 5px #000 );
             filter: drop-shadow( -5px -5px 5px #000 ); 
     */
-    opacity: 0.5;
+    opacity: 0.75;
     cursor: crosshair;
-    z-index: 1;
+    z-index: 2;
 }
 
 @-webkit-keyframes rotate {
@@ -32,9 +32,9 @@ img[id^="circle_"] {
  * Set z-indexes
  */
 .Head {
-    z-index: 2;
+    z-index: 4;
 }
 
 .eventLogo {
-    z-index: 2;
+    z-index: 4;
 }
