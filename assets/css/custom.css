@@ -260,6 +260,7 @@ div[class^="conference"] {
  * Speaker blocks
  */
 .speakersBlok {
+    margin-top:2rem;
     background-color: #D8D8D8;
     height: 200px;
     border-radius: .5rem;
