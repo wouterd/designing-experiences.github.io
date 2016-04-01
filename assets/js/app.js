@@ -59,7 +59,7 @@ angular.module('ingExperience', [
 	 */
 	jQuery('.brandbar-overlay')
 		.animate({
-			opacity: 0.82
+			opacity: 0.6
 		}, 5200)
 
 	/**
