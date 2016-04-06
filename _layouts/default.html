@@ -53,12 +53,71 @@
 
 		<!-- CUSTOM CSS FOR EXPERIENCE WEBSITE -->
 		<link rel="stylesheet" href="assets/css/custom.css">
-		<link rel="stylesheet" href="assets/css/head.css">
-		<link rel="stylesheet" href="assets/css/animations.css">
 		<script src="assets/js/app.js"></script>
 
-		<!-- EXP CONF JS -->
-		<script src="assets/js/expConf.js"></script>
+		<script>
+			jQuery(document)
+				.ready(function(){
+
+					var heightOfMenuBar = 62;
+
+					/**
+					 * Set the size of the brandbar
+					 */
+					function setBrandbar(){
+
+						var newHeight = jQuery(window).height() - heightOfMenuBar;
+						var heightLimit = 590;
+
+						if(jQuery(window).height() < heightLimit){
+							newHeight = heightLimit - heightOfMenuBar; // set to 572px, otherwise it becomes to small
+						}
+
+						jQuery('#headBar')
+							.height(newHeight); // 82 = The Guide nav height
+
+						/**
+						 * Set the video in the brancbar
+						 */
+
+						var videoWith   = 1280,
+							videoHeight = 720;
+
+
+						/**
+						 * Don't edit below this line
+						 */
+						var	videoRatio  	= videoHeight / videoWith,
+							videoNewHeight 	= $(window).width() * videoRatio;
+
+						if(videoNewHeight > ( $(window).height() - heightOfMenuBar)){
+							$('video')
+								.css({
+									width : $(window).width() * 1.05,
+									height: ($(window).width() * 1.05) * videoRatio,
+									marginTop: (0 - ((($('video').height() - ($(window).height() * 1.05) ) / 2) * 1.05)) + 'px',
+									marginLeft: 0
+								})
+						} else {
+							$('video')
+								.css({
+									width : '',
+									height: $(window).height() * 1.05,
+									marginTop: 0,
+									marginLeft: (0 - ((($('video').width() - ($(window).width() * 1.05) ) / 2) * 1.05)) + 'px'
+								})
+						}
+
+					}
+
+					jQuery(window)
+						.resize(function() {
+							setBrandbar();
+						});
+
+					setBrandbar();
+			});
+		</script>
 
 	</head>
 	<body class="tg">
@@ -71,33 +130,14 @@
 			<!-- BRANDBAR FOR BIG SCREENS -->
 			<div class="row row-noPadding">
 				<div id="headBar" class="brandbar">
-					<div class="brandbar-image" ng-style="backgroundImage" style="background-color: #000; background-image: url('assets/img/topBack.jpg'); z-index: 1"></div>
-					<div class="brandbar-image brandbar-overlay" ng-style="backgroundImage" style="background-color: transparent; background-image: url('assets/img/topOverlay.png'); opacity: 0; z-index: 3"></div>
-					
-					<!-- main text -->
-					<div class="col-xxs-10 col-xxs-offset-2" style="z-index: 4; margin-top: 4rem">
-						<h1 class="heading-b-xxxxl heading-main">Experience Design Conference</h1>
-						<h2 class="heading-b-xxxl heading-main">Amsterdam, Artis Zoo</h2>
-						<h2 class="heading-b-xxxl heading-main">20 &amp; 21 June 2016</h2>
-						<a href="http://goo.gl/forms/A6SJ9c2jx7" target="_self" class="ng-scope">
-							<span class="btn btn-wrap btn-primary" ng-class="{'btn-lg': size === 'large'}">Register</span>
-						</a>
-					</div>
-
-					<!-- main banner -->
-					<div class="heading-banner">
-						<img src="assets/img/bannerLogo.svg">
-					</div>
-					
-					{% include head.html %} 
+					<video autoplay loop>
+					  <source src="assets/vid/thirdHorizon720.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
 				</div>
 			</div>
-
 			{{ content }}
 		</main>
-		<div id="footer-app" class="ng-scope">
-		    <div class="tg" g-footer=""></div>
-		</div>
 		{% include GA.html %} 
 	</body>
 </html>

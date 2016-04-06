@@ -2,6 +2,10 @@
  * Custom CSS for experience website
  */
 
+body, html {
+    overflow:hidden;
+}
+
 /**
  * Set the brandbar
  */
